@@ -4,6 +4,8 @@ const process = require('process');
 
 const link = process.argv[2];
 
-request(link, function (response) {
-  console.log('code: ' + response.statusCode);
-});
+request
+  .get(link)
+  .on('response', function (response) {
+    console.log('code: ' + response.statusCode);
+  });
