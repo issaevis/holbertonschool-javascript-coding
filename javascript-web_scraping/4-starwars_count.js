@@ -2,7 +2,7 @@
 const request = require('request');
 const process = require('process');
 
-request(process.argv[2] + '18', (error, response, body) => {
+request(process.argv[2] + '/18', (error, response, body) => {
   if (error) {
     console.error(error);
   } else if (response.statusCode !== 200) {
